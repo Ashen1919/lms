@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--Favicons-->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!--CSS file link-->
+    <link rel="stylesheet" href="styles.css">
+
+<!--Title-->
+    <title>Saegis Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Saegis Library</h1>
+            <img id="lp_logo" src="img\saegis logo.png" alt="Saegis Logo">
+                <span class="name-id">
+                    <p id="name">Saman Silva</p>
+                    <p id="sid">2305S0000</p>
+                    <button class="logout">Logout</button>
+                </span>
+        </header>
+        <nav >
+            <ul > 
+                <button class="bt" style="border-left: 2px solid #000000;"><li>HOME</li></button>
+                <button class="bt"><li>BOOKS</li></button>
+                <button class="bt"><li>MAGAZINES</li></button>
+                <button class="bt"><li>PAST PAPERS</li></button>
+                <button class="bt"><li>ACTIVITY</li></button>
+            </ul>
+        </nav>
+        <main>
+            <div >
+                <canvas id="myChart" class="do-chart"></canvas>
+              </div>
+            <div class="content">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="img/Library/a.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/Library/b.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/Library/c.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/Library/e.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/Library/f.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                </div>
+                <div class="stats">
+                    <div id="stat-bk" class="stat">
+                        <img id="bk" src="img\bk.png" alt="Books">
+                        <span>20,000+ <br>Collection</span>
+                    </div>
+                    <div id="stat-users" class="stat">
+                        <img id="users" src="img\users.png" alt="Users">
+                        <span>2,000+ <br>Active Users</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <P>Saegis Campus</P>
+            <p >No.135, S. De S. Jayasinghe Mawatha, Nugegoda, Sri Lanka.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['IT', 'Management', 'English'],
+          datasets: [{
+            label: 'Number of percentage',
+            data: [60,30,10],
+            borderWidth: 1
+          }]
+        },
+        
+      });  
+      
+      
+    </script>
+</body>
+</html>
